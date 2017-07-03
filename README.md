@@ -1,0 +1,3 @@
+# ff7Game
+Battle logic code for the game final fantasy from Playstation 1.
+Work In Progress...
