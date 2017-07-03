@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS, Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/ff7Game.css">
+
+
+</head>
+<body>
+    <div class="container-fluid" id="theBox">
+        <!--<div class="row" id="fightStage">-->
+            <!--<div class="col-md-12">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!---->
+        <div class="row" id="EnemyDisplay">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-xs-4" id="EnemyNames">
+                        <div class="pad10heading">name</div>
+                        <div class="pad10" id="enemy1"></div>
+                        <div class="pad10" id="enemy2"></div>
+                        <div class="pad10" id="enemy3"></div>
+                    </div>
+                    <div class="col-xs-8" id="EnemyHpMPtime">
+                        <div class="row ">
+                            <div class="col-xs-6 ">
+                                <div class="pad10heading">hp</div>
+                                <div class="pad10" id="enemy1HP"></div>
+                                <div class="hpBar" id="enemy1HpBar"></div>
+                                <div class="pad10" id="enemy2HP"></div>
+                                <div class="hpBar" id="enemy2HpBar"></div>
+                                <div class="pad10" id="enemy3HP"></div>
+                                <div class="hpBar" id="enemy3HpBar"></div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="pad10heading">mp</div>
+                                <div class="pad10" id="enemy1MP"></div>
+                                <div class="pad10" id="enemy2MP"></div>
+                                <div class="pad10" id="enemy3MP"></div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="pad10heading">time</div>
+                                <div class="pad10"></div>
+                                <div class="pad10"></div>
+                                <div class="pad10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" id="HeroDisplay">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-xs-4" id="Names">
+                        <div class="pad10heading">name</div>
+                        <div class="pad10" id="char1"></div>
+                        <div class="pad10" id="char2"></div>
+                        <div class="pad10" id="char3">Tifa</div>
+                    </div>
+                    <div class="col-xs-8" id="HpMPtime">
+                        <div class="row ">
+                            <div class="col-xs-6 ">
+                                <div class="pad10heading">hp</div>
+                                <div class="pad10" id="char1HP"></div>
+                                <div class="hpBar" id="char1HpBar"></div>
+                                <div class="pad10" id="char2HP"></div>
+                                <div class="hpBar" id="char2HpBar"></div>
+                                <div class="pad10" id="char3HP"></div>
+                                <div class="hpBar" id="char3HpBar"></div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="pad10heading">mp</div>
+                                <div class="pad10" id="char1MP">cloudMP</div>
+                                <div class="pad10" id="char2MP">barretMP</div>
+                                <div class="pad10" id="char3MP">TifaMP</div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="pad10heading">time</div>
+                                <div class="pad10 timeBar" id="char1Time"></div>
+                                <div class="pad10 timeBar" id="char2Time"></div>
+                                <div class="pad10 timeBar" id="char3Time"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="fightMenu">
+        <div class="row">
+            <div class="col-xs-12">
+                <p id="attackBut" class="attackBut">Attack</p><br>
+                <p id="4XBut" class="attackBut">4X Cut</p><br>
+                <p id="mugBut" class="attackBut">Mug</p><br>
+                <p id="slashAllBut" class="attackBut">Slash-All</p>
+                <p id="backBut"><<</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="battleMenu">
+        <div class="row">
+            <div class="col-xs-12">
+                <p id="fightBut" class="attackBut">Fight</p><br>
+                <p id="magicBut" class="attackBut">Magic</p><br>
+                <p id="summonBut" class="attackBut">Summon</p><br>
+                <p id="itemBut" class="attackBut">Item</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <!--<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>-->
+    <!-- Latest compiled and minified JavaScript, Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/ff7Game.js"></script>
+    <script src="js/ff7Entities.js"></script>
+    <script src="js/ff7Classes.js"></script>
+    <script>
+        $(document).ready(function(){
+//            Weapons
+            var weapons = new Weapon();
+            var armors = new Armor();
+            var cloudWeapon = weapons.busterSword();
+            var cloudArmor = armors.ironBangle();
+
+//            Heroes
+            var cloud = new Hero('Cloud Strife', 610, 6, 314, 54, 20, 6, 16, 19, 17, 14, cloudWeapon, cloudArmor);
+            var cloudFullHP = cloud.hp;
+            var barret = new Hero('Barret Barreta', 906, 7, 332, 54, 20, 6, 16, 19, 17, 14, cloudWeapon, cloudArmor);
+            var barretFullHP = barret.hp;
+            var tifa = new Hero('Tifa Boss', 610, 6, 314, 54, 20, 6, 16, 19, 17, 14, cloudWeapon, cloudArmor);
+            var tifaFullHP = tifa.hp;
+
+
+//            Enemies
+            var airBuster = new Enemy('Air Buster', 180, 15, 1200, 0, 0, 75, 0, 0, 0, 2, cloudWeapon, cloudArmor);
+            var airBusterFullHP = airBuster.hp;
+            var airBuster2 = new Enemy('Air Buster', 180, 15, 1200, 0, 0, 75, 0, 0, 0, 2, cloudWeapon, cloudArmor);
+            var airBuster3 = new Enemy('Air Buster', 180, 15, 1200, 0, 0, 75, 0, 0, 0, 2, cloudWeapon, cloudArmor);
+
+
+            setup();
+            function setup() {
+
+//            Writting to Hero HTML Section
+                $('#char1').html(cloud.name);
+                $('#char2').html(barret.name);
+                $('#char3').html(tifa.name);
+
+                $('#char1HP').html(cloud.hp);
+                $('#char2HP').html(barret.hp);
+                $('#char3HP').html(tifa.hp);
+
+                $('#char1HpBar').animate({
+                    width: (cloud.hp / cloudFullHP) * 100 + '%'
+                });
+                $('#char2HpBar').animate({
+                    width: (barret.hp / barretFullHP) * 100 + '%'
+                });
+                $('#char3HpBar').animate({
+                    width: (tifa.hp / tifaFullHP) * 100 + '%'
+                });
+
+                $('#char1MP').html(cloud.mp);
+                $('#char2MP').html(barret.mp);
+                $('#char3MP').html(tifa.mp);
+
+
+//            Writting to Enemy HTML Section
+                $('#enemy1').html(airBuster.name);
+                $('#enemy2').html(airBuster.name);
+                $('#enemy3').html(airBuster.name);
+
+                $('#enemy1HP').html(airBuster.hp);
+                $('#enemy2HP').html(airBuster.hp);
+                $('#enemy3HP').html(airBuster.hp);
+
+                $('#enemy1HpBar').animate({
+                    width: (airBuster.hp / airBusterFullHP) * 100 + '%'
+                });
+
+                $('#enemy2HpBar').animate({
+                    width: (airBuster.hp / airBuster.hp) * 100 + '%'
+                });
+                $('#enemy3HpBar').animate({
+                    width: (airBuster.hp / airBuster.hp) * 100 + '%'
+                });
+
+                $('#enemy1MP').html(airBuster.mp);
+                $('#enemy2MP').html(airBuster.mp);
+                $('#enemy3MP').html(airBuster.mp);
+            }
+
+
+
+            $("#fightBut").click(function(){
+                $('#battleMenu').fadeOut();
+                $('#fightMenu').fadeIn();
+            });
+
+            $("#backBut").click(function(){
+                $('#battleMenu').fadeIn();
+                $('#fightMenu').fadeOut();
+            });
+
+            $("#slashAllBut").click(function(){
+                $('#char1Time').css('width','0px')
+                $('#fightMenu').fadeOut();
+                airBuster.hp = airBuster.hp - 50;
+                $('#enemy1HP').html(airBuster.hp);
+                $('#enemy1HpBar').animate({
+                    width: (airBuster.hp/airBusterFullHP)*100 + '%'
+                });
+                setTimeout(myFunction, 3000);
+                $('#char1Time').animate({
+                    width: '100%'
+                },3000);
+            });
+
+            function myFunction(){
+                $('#battleMenu').fadeIn();
+            }
+
+
+
+         /*   function attack(attacker, defenders) {  // need to make star args
+
+
+            }
+
+            attack(cloud.busterSword(), airBuster)*/
+
+
+        });
+    </script>
+</body>
+</html>
+object, object
+attack(cloud, airbuster)
+slashAll(cloud,airBuster)
+fire(cloud, airBuster, boma, airo)
